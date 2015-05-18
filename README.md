@@ -1,5 +1,7 @@
-# iot-design-kit
+# iot-service-kit
 Internet of Things (IoT) Design Kit (cards, maps, 3D printable pieces) for rapid service concept iteration
+
+Website: http://futurice.github.io/iot-service-kit/
 
 This kit is currently under modification and not yet complete. Check back soon.
 
