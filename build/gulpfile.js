@@ -5,7 +5,8 @@ var gulp = require('gulp');
 var sass = require('gulp-sass'),
     autoprefixer = require('gulp-autoprefixer'),
     concat = require('gulp-concat'),
-    minifyCSS = require('gulp-minify-css');
+    minifyCSS = require('gulp-minify-css'),
+    connect = require('gulp-connect');
 
 // compile sass to css
 gulp.task('sass', function() {
@@ -43,5 +44,21 @@ gulp.task('copy', function() {
     .pipe(gulp.dest('../secret/images'));
 });
 
+// watch files for changes
+gulp.task('watch', function() {
+    gulp.watch('../images/**', ['copy']);
+    gulp.watch('../src/*.html', ['copy']);
+    gulp.watch('../src/scss/*.scss', ['minify-css']);
+});
+
+// start a server and watch for changes
+gulp.task('server', ['copy', 'minify-css', 'watch'], function() {
+    connect.server({
+        port: 4002,
+        root: ['../secret'],
+        livereload: true
+    });
+});
+
 // default task
-gulp.task('default', ['copy', 'minify-css']);
+gulp.task('default', ['server']);
