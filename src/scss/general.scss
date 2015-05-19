@@ -6,7 +6,8 @@ html {
 
 body {
     background-color: $color-light-gray;
-    line-height: 2.4rem;
+    color: $color-dark-blue;
+    line-height: 2.0rem;
     font-family: $font-bodycopy;
     font-size: 1.6rem;
     font-weight: 300;
@@ -24,6 +25,67 @@ body {
 
 p {
     padding: 4px 0;
+
+    &.large {
+        line-height: 2.4rem;
+        font-size: 2.0rem;
+    }
+}
+
+.button {
+    border: 1px solid $color-white;
+    color: $color-white;
+    display: inline-block;
+    padding: 5px 20px;
+    margin: 20px 0 40px 0;
+    transition: color $animation-duration, background-color $animation-duration;
+
+    &.dark-blue {
+        border-color: $color-white;
+        color: $color-white;
+
+        &:hover,
+        &:focus {
+            background-color: $color-white;
+            color: $color-dark-blue;
+        }
+    }
+
+    &.green {
+        border-color: $color-white;
+        color: $color-white;
+
+        &:hover,
+        &:focus {
+            background-color: $color-white;
+            color: $color-futurice;
+        }
+    }
+
+    &.light-gray {
+        border-color: $color-dark-blue;
+        color: $color-dark-blue;
+
+        &:hover,
+        &:focus {
+            background-color: $color-dark-blue;
+            color: $color-white;
+        }
+    }
+
+    &:hover,
+    &:focus {
+        color: $color-white;
+        text-decoration: none;
+    }
+}
+
+.element-spacing {
+    margin-bottom: $element-spacing;
+
+    @media (min-width: 768px) {
+        margin-bottom: $medium-element-spacing;
+    }
 }
 
 .fullsize-container {
@@ -35,13 +97,23 @@ p {
         color: $color-black;
     }
 
+    &.dark-blue {
+        background-color: $color-dark-blue;
+        color: $color-white;
+    }
+
+    &.green {
+        background-color: $color-futurice;
+        color: $color-white;
+    }
+
     &.hero {
         background-image: url("../images/hero.png");
         background-position: center center;
         background-repeat: no-repeat;
         background-size: cover;
         min-height: 450px;
-        padding: 200px 0 80px 0;
+        padding: 200px 0 0 0;
         text-align: center;
 
         .heading-1 {
@@ -71,6 +143,30 @@ p {
                 padding-top: 40px;
             }
         }
+    }
+
+    &.opensource,
+    &.futurice,
+    &.share,
+    &.photos,
+    &.future {
+        padding: 60px 0 40px 0;
+        text-align: center;
+
+        @media (max-width: 767px) {
+            text-align: left;
+        }
+
+        .heading-1 {
+            color: $color-white;
+            font-size: 3.6rem;
+            line-height: 4.0rem;
+        }
+
+        // p {
+        //     line-height: 2.0rem;
+        //     font-size: 1.6rem;
+        // }
     }
 }
 
@@ -108,7 +204,7 @@ p {
 }
 
 .navbar-default {
-    background-color: $color-gray-blue;
+    background-color: $color-futurice;
     border: 0;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 
@@ -126,7 +222,7 @@ p {
 
     .navbar-nav > li > a {
         color: $color-white;
-        transition: color $animation-duration, background-color $animation-duration;
+        transition: color $animation-duration, background-color $medium-animation-duration;
 
         &:hover,
         &.active {
@@ -184,7 +280,6 @@ p {
     }
 }
 
-
 .futurice_logo {
     background-image: url("../images/futurice_logo.png");
     background-position: center center;
@@ -192,7 +287,7 @@ p {
     background-size: contain;
     display: inline-block;
     height: 2.4rem;
-    margin-top: 50px;
+    margin-top: 70px;
     text-indent: -9999px;
     width: 120px;
     transition: transform $animation-duration;

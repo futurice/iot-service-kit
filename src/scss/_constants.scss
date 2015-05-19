@@ -11,7 +11,11 @@ $color-dark-blue: #0a3442;
 $font-regular: "Montserrat", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 $font-bodycopy: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 
-// other constants
+// animation duration
 $animation-duration: .1s;
 $medium-animation-duration: .3s;
 $long-animation-duration: .5s;
+
+// other constants
+$element-spacing: 40px;
+$medium-element-spacing: 60px;
