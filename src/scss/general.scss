@@ -27,7 +27,6 @@ p {
 }
 
 .fullsize-container {
-    // padding: ($element-spacing + 8px) 0 8px 0;
     padding: 40px 0;
     width: 100%;
 
@@ -36,8 +35,8 @@ p {
         color: $color-black;
     }
 
-    &.header {
-        background-image: url("../images/header.png");
+    &.hero {
+        background-image: url("../images/hero.png");
         background-position: center center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -55,7 +54,35 @@ p {
         background-image: url("../images/cards.png");
         background-position: right center;
         background-repeat: no-repeat;
+        background-size: 50% auto;
+        min-height: 560px;
+
+        @media (min-width: 992px) {
+            background-size: contain;
+            min-height: auto;
+        }
+
+        @media (max-width: 767px) {
+            background-image: none;
+        }
+
+        .heading-1 {
+            @media (min-width: 992px) {
+                padding-top: 40px;
+            }
+        }
+    }
+}
+
+.media {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    &.cards {
+        background-image: url("../images/cards.png");
+        background-position: right center;
         background-size: contain;
-        min-height: 600px;
+        height: 300px;
     }
 }
