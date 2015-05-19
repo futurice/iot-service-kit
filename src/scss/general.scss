@@ -85,4 +85,24 @@ p {
         background-size: contain;
         height: 300px;
     }
+
+    &.kit {
+        background-image: url("../images/kit.png");
+        background-position: center center;
+        background-size: contain;
+        height: 300px;
+    }
+
+    &.blueprints {
+        background-image: url("../images/blueprints_overview.png");
+        background-position: center center;
+        background-size: contain;
+        height: 300px;
+    }
+}
+
+.pull-right-sm {
+    @media (min-width: 767px) {
+        float: right;
+    }
 }
