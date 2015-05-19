@@ -1,13 +1,17 @@
 
 // colors
-
-// general colors
 $color-futurice: #349d4a;
 $color-light-gray: #ebe9e8;
 $color-black: #333333;
 $color-white: #ffffff;
+$color-gray-blue: #7b9499;
+$color-dark-blue: #0a3442;
 
 // fonts
-
 $font-regular: "Montserrat", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 $font-bodycopy: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+
+// other constants
+$animation-duration: .1s;
+$medium-animation-duration: .3s;
+$long-animation-duration: .5s;

@@ -40,12 +40,12 @@ p {
         background-position: center center;
         background-repeat: no-repeat;
         background-size: cover;
-        min-height: 300px;
-        padding: 130px 0 80px 0;
+        min-height: 450px;
+        padding: 200px 0 80px 0;
+        text-align: center;
 
         .heading-1 {
             color: $color-white;
-            text-align: center;
             text-transform: uppercase;
         }
     }
@@ -104,5 +104,101 @@ p {
 .pull-right-sm {
     @media (min-width: 767px) {
         float: right;
+    }
+}
+
+.navbar-default {
+    background-color: $color-gray-blue;
+    border: 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+
+    .navbar-collapse {
+
+        @media (max-width: 767px) {
+            background-color: $color-dark-blue;
+        }
+
+        &.in {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.40);
+        }
+    }
+
+
+    .navbar-nav > li > a {
+        color: $color-white;
+        transition: color $animation-duration, background-color $animation-duration;
+
+        &:hover,
+        &.active {
+            background-color: $color-dark-blue;
+            color: $color-white;
+        }
+    }
+
+    .navbar-toggle {
+        &:hover,
+        &:focus {
+            background-color: transparent;
+        }
+
+        .icon-bar {
+            background-color: $color-white;
+        }
+    }
+
+    .navbar-brand {
+        color: $color-white;
+    }
+}
+
+.navbar-toggle {
+    background-color: transparent;
+    border: 0;
+
+    .icon-bar {
+        transition: all .1s ease-in-out;
+    }
+
+    .bar-1 {
+        transform: rotate(45deg) translateX(4.243px) translateY(4.243px);
+    }
+
+    .bar-2 {
+        opacity: 0.0;
+    }
+
+    .bar-3 {
+        transform: rotate(-45deg) translateX(4.243px) translateY(-4.243px);
+    }
+
+    &.collapsed {
+
+        .bar-3,
+        .bar-1 {
+            transform: none;
+        }
+
+        .bar-2 {
+            opacity: 1.0;
+        }
+    }
+}
+
+
+.futurice_logo {
+    background-image: url("../images/futurice_logo.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: inline-block;
+    height: 2.4rem;
+    margin-top: 50px;
+    text-indent: -9999px;
+    width: 120px;
+    transition: transform $animation-duration;
+
+    &:hover,
+    &:focus {
+        transform: scale(1.05, 1.05);
     }
 }
