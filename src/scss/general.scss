@@ -149,7 +149,7 @@ p {
     &.futurice,
     &.share,
     &.photos,
-    &.future {
+    &.go-out {
         padding: 60px 0 40px 0;
         text-align: center;
 
@@ -162,11 +162,22 @@ p {
             font-size: 3.6rem;
             line-height: 4.0rem;
         }
+    }
 
-        // p {
-        //     line-height: 2.0rem;
-        //     font-size: 1.6rem;
-        // }
+    &.futurice {
+        .futurice-logo {
+            height: 3.6rem;
+            margin-top: 0;
+            margin-bottom: 20px;
+            width: 160px;
+        }
+    }
+
+    &.go-out {
+        .futurice-logo {
+            height: 2.0rem;
+            width: 105px;
+        }
     }
 }
 
@@ -280,7 +291,7 @@ p {
     }
 }
 
-.futurice_logo {
+.futurice-logo {
     background-image: url("../images/futurice_logo.png");
     background-position: center center;
     background-repeat: no-repeat;
