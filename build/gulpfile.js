@@ -42,11 +42,16 @@ gulp.task('copy', function() {
         '../images/**'
     ])
     .pipe(gulp.dest('../secret/images'));
+    gulp.src([
+        '../videos/**'
+    ])
+    .pipe(gulp.dest('../secret/videos'));
 });
 
 // watch files for changes
 gulp.task('watch', function() {
     gulp.watch('../images/**', ['copy']);
+    gulp.watch('../videos/**', ['copy']);
     gulp.watch('../src/*.html', ['copy']);
     gulp.watch('../src/scss/*.scss', ['minify-css']);
 });

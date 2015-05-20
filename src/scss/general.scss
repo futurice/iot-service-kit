@@ -157,6 +157,17 @@ p {
         }
     }
 
+    &.video {
+        padding: 40px 0 60px 0;
+
+        .container {
+            @media (max-width: 767px) {
+                padding-left: 0;
+                padding-right: 0;
+            }
+        }
+    }
+
     &.opensource,
     &.futurice,
     &.share,
@@ -206,10 +217,10 @@ p {
     }
 
     &.kit {
-        background-image: url("../images/kit.png");
+        background-image: url("../images/pieces.png");
         background-position: center center;
         background-size: contain;
-        height: 300px;
+        height: 180px;
     }
 
     &.blueprints {
@@ -344,4 +355,19 @@ p {
     &.twitter {
         background-image: url("../images/social_icon_twitter.png");
     }
+}
+
+.video-js {
+    position: relative !important;
+    width: 100% !important;
+    height: 529px !important;
+
+    @media (max-width: 767px) {
+        height: 320px !important;
+    }
+}
+
+.vjs-default-skin .vjs-play-progress,
+.vjs-default-skin .vjs-volume-level {
+    background-color: $color-futurice;
 }
