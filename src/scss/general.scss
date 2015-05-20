@@ -308,3 +308,28 @@ p {
         transform: scale(1.05, 1.05);
     }
 }
+
+.social-icon {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: inline-block;
+    height: 60px;
+    margin: 12px 16px;
+    width: 60px;
+    text-indent: -9999px;
+    transition: transform $animation-duration;
+
+    &:hover,
+    &:focus {
+        transform: scale(1.1, 1.1);
+    }
+
+    &.facebook {
+        background-image: url("../images/social_icon_facebook.png");
+    }
+
+    &.twitter {
+        background-image: url("../images/social_icon_twitter.png");
+    }
+}
