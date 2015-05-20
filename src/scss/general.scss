@@ -32,6 +32,17 @@ p {
     }
 }
 
+a {
+    color: $color-futurice;
+    transition: color $animation-duration;
+
+    &:hover,
+    &:focus {
+        color: $color-dark-blue;
+        text-decoration: none;
+    }
+}
+
 .button {
     border: 1px solid $color-white;
     color: $color-white;
@@ -108,11 +119,11 @@ p {
     }
 
     &.hero {
-        background-image: url("../images/hero.png");
+        background-image: url("../images/hero.jpg");
         background-position: center center;
         background-repeat: no-repeat;
         background-size: cover;
-        padding: 120px 0;
+        padding: 180px 0;
         position: relative;
         text-align: center;
 
@@ -122,13 +133,14 @@ p {
 
         .heading-1 {
             color: $color-white;
+            text-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
             text-transform: uppercase;
         }
 
         .hero-footer {
             bottom: 0;
             left: 0;
-            padding: 16px 0;
+            padding: 20px 0;
             position: absolute;
             width: 100%;
         }
@@ -165,6 +177,13 @@ p {
                 padding-left: 0;
                 padding-right: 0;
             }
+        }
+    }
+
+    &.contact {
+        .heading-1 {
+            font-size: 3.6rem;
+            line-height: 4.0rem;
         }
     }
 
@@ -217,10 +236,14 @@ p {
     }
 
     &.kit {
-        background-image: url("../images/pieces.png");
+        background-image: url("../images/kit.png");
         background-position: center center;
         background-size: contain;
-        height: 180px;
+        height: 300px;
+
+        @media (min-width: 767px) {
+            height: 450px;
+        }
     }
 
     &.blueprints {
@@ -228,6 +251,10 @@ p {
         background-position: center center;
         background-size: contain;
         height: 300px;
+
+        @media (min-width: 767px) {
+            height: 450px;
+        }
     }
 }
 
@@ -277,7 +304,20 @@ p {
     }
 
     .navbar-brand {
-        color: $color-white;
+        background-image: url("../images/iot_service_logo.png");
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        display: inline-block;
+        width: 180px;
+        height: 50px;
+        margin: 0;
+        padding: 0;
+        text-indent: -9999px;
+
+        @media (max-width: 768px) {
+            margin-left: 15px;
+        }
     }
 }
 
@@ -370,4 +410,48 @@ p {
 .vjs-default-skin .vjs-play-progress,
 .vjs-default-skin .vjs-volume-level {
     background-color: $color-futurice;
+}
+
+// .cards-3d {
+//     background-color: #ff0000;
+//     height: 100px; width: 100px;
+//     transform: rotateX(39deg) rotateZ(347deg);
+//     perspective: 500px;
+//     perspective-origin: 50% 50%;
+// }
+
+.person-portrait {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: block;
+    height: 200px;
+    margin: 0 auto;
+    width: 200px;
+
+    &.paul {
+        background-image: url("../images/paul_pic.png");
+    }
+
+    &.ricardo {
+        background-image: url("../images/ric_pic.png");
+    }
+}
+
+.person-name {
+    color: $color-dark-blue;
+    font-family: $font-regular;
+    font-size: 2.6rem;
+    font-weight: 700;
+    line-height: 3.0rem;
+    margin: 16px 0 4px 0;
+    padding: 0;
+}
+
+.person-title {
+    line-height: 2.0rem;
+    font-family: $font-bodycopy;
+    font-size: 1.6rem;
+    font-weight: 300;
+    margin: 0 0 16px 0;
 }
