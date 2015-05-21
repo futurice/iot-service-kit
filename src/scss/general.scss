@@ -14,7 +14,7 @@ body {
 }
 
 .heading-1 {
-    color: $color-futurice;
+    color: $color-dark-blue;
     font-family: $font-regular;
     font-size: 4.6rem;
     font-weight: 800;
@@ -126,22 +126,16 @@ a {
         padding: 180px 0;
         position: relative;
         text-align: center;
+        margin-top: 70px;
 
         @media (max-width: 767px) {
             padding: 80px 0;
+            margin-top: 50px;
         }
 
         .heading-1 {
             color: $color-white;
             text-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
-        }
-
-        .hero-footer {
-            bottom: 0;
-            left: 0;
-            padding: 20px 0;
-            position: absolute;
-            width: 100%;
         }
     }
 
@@ -265,8 +259,13 @@ a {
 
 .navbar-header {
     font-size: 3rem;
-    height: 50px;
-    line-height: 50px;
+    height: 80px;
+    line-height: 80px;
+
+    @media (min-width: 480px) {
+        height: 50px;
+        line-height: 50px;
+    }
 
     @media (min-width: 768px) {
         height: 72px;
@@ -282,12 +281,30 @@ a {
         color: $color-futurice;
     }
 
+    height: 3rem;
+    display: block;
+    margin-top: -1.5rem;
+
+    @media (min-width: 480px) {
+        display: inline-block;
+        height: 50px;
+        line-height: 50px;
+        margin-bottom: 0;
+        margin-top: 0;
+    }
+
     @media (max-width: 767px) {
         margin-left: 15px;
     }
 }
 .header-by {
-    font-size: 2rem;
+    font-size: 1.8rem;
+    margin-left: 15px;
+
+    @media (min-width: 480px) {
+        margin-left: 0;
+    }
+
 }
 .header-logo {
     display: inline-block;
