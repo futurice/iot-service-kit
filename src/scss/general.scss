@@ -263,6 +263,42 @@ a {
     }
 }
 
+.navbar-header {
+    font-size: 3rem;
+    height: 50px;
+    line-height: 50px;
+
+    @media (min-width: 768px) {
+        height: 72px;
+        line-height: 72px;
+    }
+}
+.header-title {
+    font-weight: 800;
+    color: $color-black;
+    transition: color $medium-animation-duration ease-in-out;
+
+    &:hover {
+        color: $color-futurice;
+    }
+
+    @media (max-width: 767px) {
+        margin-left: 15px;
+    }
+}
+.header-by {
+    font-size: 2rem;
+}
+.header-logo {
+    display: inline-block;
+    height: 2rem;
+    position: relative;
+    top: -2px;
+    img {
+        max-height: 2rem;
+    }
+}
+
 .navbar-default {
     background-color: $color-navbar-bg;
     border: 0;
@@ -271,7 +307,10 @@ a {
     .navbar-collapse {
 
         @media (max-width: 767px) {
-            background-color: $color-dark-blue;
+            >li>a:hover {
+                color: $color-navbar-text;
+                border-color: transparent;
+            }
         }
 
         &.in {
@@ -304,7 +343,7 @@ a {
         }
 
         .icon-bar {
-            background-color: $color-white;
+            background-color: $color-navbar-text;
         }
     }
 
