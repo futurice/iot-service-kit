@@ -1,6 +1,6 @@
 # iot-service-kit Github page
 
-This directory contains the code for the IoT Service Kit site, http://futurice.github.io/iot-service-kit.
+This directory contains the code for the IoT Service Kit site, http://futurice.github.io/iot-service-kit (also http://iotservicekit.com)
 
 # Core Components
 
