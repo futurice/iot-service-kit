@@ -142,7 +142,14 @@ a {
 
         .heading-1 {
             color: $color-white;
+            font-size: 6.6rem;
+            line-height: 7.0rem;
             text-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+
+            @media (max-width: 767px) {
+                font-size: 4.6rem;
+                line-height: 5.0rem;
+            }
         }
     }
 
@@ -218,6 +225,7 @@ a {
     &.go-out {
         .futurice-logo {
             height: 2.0rem;
+            margin-bottom: 3px;
             width: 105px;
         }
     }
@@ -422,6 +430,8 @@ a {
     }
 }
 
+
+
 .futurice-logo {
     background-image: url("../images/futurice_logo.png");
     background-position: center center;
@@ -429,7 +439,6 @@ a {
     background-size: contain;
     display: inline-block;
     height: 2.4rem;
-    margin-top: 70px;
     text-indent: -9999px;
     width: 120px;
     transition: transform $animation-duration;

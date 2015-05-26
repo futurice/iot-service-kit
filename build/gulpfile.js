@@ -1,6 +1,8 @@
 // include gulp
 var gulp = require('gulp');
 
+var distDirectory = 'secret/'; // e.g. 'secret/' or '/'
+
 // include gulp plugins
 var sass = require('gulp-sass'),
     autoprefixer = require('gulp-autoprefixer'),
@@ -29,7 +31,7 @@ gulp.task('minify-css', ['sass'], function() {
     ])
     .pipe(concat('iot-service-kit-all.css'))
     .pipe(minifyCSS())
-    .pipe(gulp.dest('../secret/css'));
+    .pipe(gulp.dest('../' + distDirectory +'css'));
 });
 
 // copy assets
@@ -37,15 +39,18 @@ gulp.task('copy', function() {
     gulp.src([
         '../src/*.html'
     ])
-    .pipe(gulp.dest('../secret'));
-    gulp.src([
-        '../images/**'
-    ])
-    .pipe(gulp.dest('../secret/images'));
-    gulp.src([
-        '../videos/**'
-    ])
-    .pipe(gulp.dest('../secret/videos'));
+    .pipe(gulp.dest('../' + distDirectory));
+
+    if ( distDirectory !== '/') {
+        gulp.src([
+            '../images/**'
+        ])
+        .pipe(gulp.dest('../' + distDirectory + 'images'));
+        gulp.src([
+            '../videos/**'
+        ])
+        .pipe(gulp.dest('../' + distDirectory + 'videos'));
+    }
 });
 
 // watch files for changes
@@ -60,7 +65,7 @@ gulp.task('watch', function() {
 gulp.task('server', ['copy', 'minify-css', 'watch'], function() {
     connect.server({
         port: 4002,
-        root: ['../secret'],
+        root: ['../' + distDirectory],
         livereload: true
     });
 });
