@@ -1,7 +1,7 @@
 // include gulp
 var gulp = require('gulp');
 
-var distDirectory = 'secret/'; // e.g. 'secret/' or '/'
+var distDirectory = '/'; // e.g. 'secret/' or '/'
 
 // include gulp plugins
 var sass = require('gulp-sass'),
