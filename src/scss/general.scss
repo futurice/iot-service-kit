@@ -142,7 +142,14 @@ a {
 
         .heading-1 {
             color: $color-white;
+            font-size: 6.6rem;
+            line-height: 7.0rem;
             text-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+
+            @media (max-width: 767px) {
+                font-size: 4.6rem;
+                line-height: 5.0rem;
+            }
         }
     }
 
