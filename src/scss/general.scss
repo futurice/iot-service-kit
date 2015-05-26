@@ -213,6 +213,22 @@ a {
         }
     }
 
+    &.opensource {
+        a {
+            &:hover,
+            &:focus {
+                color: $color-white;
+            }
+        }
+
+        .button.dark-blue {
+            &:hover,
+            &:focus {
+                color: $color-dark-blue;
+            }
+        }
+    }
+
     &.futurice {
         .futurice-logo {
             height: 3.6rem;
