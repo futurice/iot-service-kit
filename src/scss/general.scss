@@ -127,7 +127,7 @@ a {
 
     &.hero {
         background-image: url("../images/hero.jpg");
-        background-position: center center;
+        background-position: center 60%;
         background-repeat: no-repeat;
         background-size: cover;
         padding: 180px 0;
@@ -547,4 +547,17 @@ a {
     font-size: 1.6rem;
     font-weight: 300;
     margin: 0 0 16px 0;
+}
+
+#video-iframe {
+    height: 500px;
+
+
+    @media (min-width: 992px) {
+        height: 650px;
+    }
+
+    @media (max-width: 767px) {
+        height: 300px;
+    }
 }
