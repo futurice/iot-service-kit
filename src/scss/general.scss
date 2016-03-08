@@ -54,9 +54,11 @@ a {
     border: 1px solid $color-white;
     color: $color-white;
     display: inline-block;
-    padding: 5px 20px;
+    font-size: 1.8rem;
+    padding: 9px 20px 5px 20px;
     margin: 20px 0 40px 0;
     transition: color $animation-duration, background-color $animation-duration;
+    text-transform: uppercase;
 
     &.dark-blue {
         border-color: $color-white;
@@ -127,10 +129,10 @@ a {
 
     &.hero {
         background-image: url("../images/hero.jpg");
-        background-position: center 60%;
+        background-position: center 10%;
         background-repeat: no-repeat;
         background-size: cover;
-        padding: 180px 0;
+        padding: 230px 0 10px 0;
         position: relative;
         text-align: center;
         margin-top: 70px;
@@ -142,14 +144,22 @@ a {
 
         .heading-1 {
             color: $color-white;
-            font-size: 6.6rem;
-            line-height: 7.0rem;
-            text-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+            font-size: 5.4rem;
+            line-height: 6.0rem;
+            margin: 0;
+            padding: 10px 0;
+            text-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
 
             @media (max-width: 767px) {
                 font-size: 4.6rem;
                 line-height: 5.0rem;
             }
+        }
+
+        .button {
+            border-width: 2px;
+            font-size: 2.8rem;
+            padding: 13px 24px 9px 24px;
         }
     }
 
@@ -245,6 +255,11 @@ a {
             width: 105px;
         }
     }
+}
+
+.hero-box {
+    display: block;
+    padding: 10px 0 0 0;
 }
 
 .media {
