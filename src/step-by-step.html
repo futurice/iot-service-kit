@@ -19,19 +19,55 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.2/TweenMax.min.js"></script>
   </head>
   <body>
-    <header class="instruction-header">
-      header
+    <!-- Header -->
+    <header class="navbar navbar-default navbar-fixed-top">
+      <div class="container" role="navigation">
+        <div class="navbar-header">
+          <a href="./" class="header-title">IoT Service Kit</a>
+
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-nav-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar bar-1"></span>
+            <span class="icon-bar bar-2"></span>
+            <span class="icon-bar bar-3"></span>
+          </button>
+        </div>
+        <div class="navbar-collapse collapse" id="main-nav-collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li>
+              <a href="#kit">Kit</a>
+            </li>
+            <li>
+                <a href="#how">How it Works</a>
+            </li>
+            <li>
+                <a href="#open">Open-Source</a>
+            </li>
+            <li>
+                <a href="#contacts">Contacts</a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </header>
+
+    <div class="instruction-header">
+      hero image
+    </div>
     <div id="instruction-bg" class="instruction-sections">
       <section id="step-1" class="instruction-section red">
         <div class="instruction-figures">
           <figure id="pin" class="instruction-figure">
             <div class="iot-board-shadow"></div>
             <div class="iot-board step-1"></div>
+            <div id="figure-step-2" class="figure-container step-2"></div>
+            <div id="smart-beacon-area" class="area smart-beacon"></div>
+            <div id="smart-beacon-card" class="card smart-beacon"></div>
+            <div id="smart-phone-card" class="card smart-phone"></div>
           </figure>
         </div>
         <div class="instruction-content">
-          <h1 class="heading-1">Physical space</h1>
+          <h1 class="heading-1">Physical Space</h1>
           <p>The kit was made to support your creative process on IoT projects that involve physical spaces.</p>
           <p>You normally should start with the context and a representation of the physical space in your project or idea.</p>
           <p>The blueprints provided in the kit are generic scenarios to kick-start your creativity.</p>
@@ -47,13 +83,16 @@
       <section id="step-3" class="instruction-section orange">
         <div class="instruction-content">
           <h1 class="heading-1">Interactions</h1>
-          <p>The kit was made to support your creative process on IoT projects that involve physical spaces.</p>
+          <p>Think in journeys and small interactions triggered by sensors, devices and services by using the cards.</p>
+          <p id="step-3-2">In this case, we used a Smart Beacon to dectect our user’s presence at the entrance of the supermarket.</p>
+          <p id="step-3-3">This will trigger a welcome notification in their smartphones as they pass by the entrance beacon. We wrote what happend in a post-it and place it on the blueprint.</p>
         </div>
       </section>
       <section id="step-4" class="instruction-section blue-green">
         <div class="instruction-content">
           <h1 class="heading-1">Service Journey</h1>
-          <p>The kit was made to support your creative process on IoT projects that involve physical spaces.</p>
+          <p>Keep ideating, and map your ideas and interactions directly on the blueprint. Make use of the cards ad the 3D Printed pieces.</p>
+          <p>Play around with the devices, test your ideas and role play. This level of accessibility will help on the discussion no matter who is in the room.</p>
         </div>
       </section>
       <section id="step-5" class="instruction-section green">
@@ -75,8 +114,7 @@
   <script>
     var controller = new ScrollMagic.Controller();
     $(function () {
-      // var tween = TweenMax.to("#instruction-bg", 0.5, {rotationY: 180});
-      var scene = new ScrollMagic.Scene({triggerElement: "#pin", offset: 156, duration: "1130%"})
+      var scene = new ScrollMagic.Scene({triggerElement: "#pin", offset: 140, duration: "1130%"})
         .setPin("#pin")
         // .addIndicators({name: "2 (duration: 0)"}) // add indicators (requires plugin)
         .addTo(controller);
@@ -87,11 +125,36 @@
       var tweenBlueGreen = TweenMax.to("#instruction-bg", 1, {backgroundColor: "#00594a"});
       var tweenGreen = TweenMax.to("#instruction-bg", 1, {backgroundColor: "#40b045"});
 
-      // var tweenRed = TweenMax.to("#instruction-bg", 1, {backgroundColor: "#ffa8a0"});
-      // var tweenBlue = TweenMax.to("#instruction-bg", 1, {backgroundColor: "#809aa0", ease: Quint.easeInOut});
-      // var tweenOrange = TweenMax.to("#instruction-bg", 1, {backgroundColor: "#ffc18f"});
-      // var tweenBlueGreen = TweenMax.to("#instruction-bg", 1, {backgroundColor: "#80aca5"});
-      // var tweenGreen = TweenMax.to("#instruction-bg", 1, {backgroundColor: "#a0d8a2"});
+
+      var enlargeSmartBeaconCard = TweenMax.to("#smart-beacon-card", 1, {
+        rotation: 2,
+        x: 65,
+        y: 45
+      });
+      var shrinkSmartBeaconCard = TweenMax.to("#smart-beacon-card", 1, {
+        scale: 0.25,
+        rotation: 10,
+        x: 0,
+        y: 0,
+        ease: Cubic.easeInOut
+      });
+      var showSmartBeaconArea = TweenMax.to("#smart-beacon-area", 1, {
+        opacity: 1.0,
+        ease: Cubic.easeIn
+      });
+      var enlargeSmartPhoneCard = TweenMax.to("#smart-phone-card", 1, {
+        rotation: -4,
+        x: -60,
+        y: 55
+      });
+      var shrinkSmartPhoneCard = TweenMax.to("#smart-phone-card", 1, {
+        scale: 0.25,
+        rotation: -2,
+        x: 0,
+        y: 0,
+        ease: Cubic.easeInOut
+      });
+
 
       new ScrollMagic.Scene({triggerElement: "#step-1", duration: "80%"})
         .setTween(tweenRed)
@@ -116,6 +179,28 @@
       new ScrollMagic.Scene({triggerElement: "#step-5", offset: -100, duration: '80%'})
         .setTween(tweenGreen)
         // .addIndicators({name: "green"})
+        .addTo(controller);
+
+
+      new ScrollMagic.Scene({triggerElement: "#step-3-2", offset: -260, duration: 200})
+        .setTween(enlargeSmartBeaconCard)
+        // .addIndicators({name: "step-3-2"})
+        .addTo(controller);
+      new ScrollMagic.Scene({triggerElement: "#step-3-2", offset: -20, duration: 100})
+        .setTween(shrinkSmartBeaconCard)
+        // .addIndicators({name: "step-3-2"})
+        .addTo(controller);
+      new ScrollMagic.Scene({triggerElement: "#step-3-2", offset: 0, duration: 100})
+        .setTween(showSmartBeaconArea)
+        .addTo(controller);
+
+      new ScrollMagic.Scene({triggerElement: "#step-3-3", offset: -260, duration: 200})
+        .setTween(enlargeSmartPhoneCard)
+        // .addIndicators({name: "step-3-3"})
+        .addTo(controller);
+      new ScrollMagic.Scene({triggerElement: "#step-3-3", offset: -20, duration: 100})
+        .setTween(shrinkSmartPhoneCard)
+        // .addIndicators({name: "step-3-3"})
         .addTo(controller);
 
     });
