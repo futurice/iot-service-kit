@@ -1,0 +1,100 @@
+@import "constants";
+
+.instruction-section {
+  display: block;
+  height: 200vh;
+  margin: 0 auto;
+  max-width: 900px;
+  padding: 0;
+
+  @media (max-width: $max-mobile-width) {
+    height: auto;
+    max-width: none;
+  }
+
+  .heading-1 {
+    @media (max-width: $max-mobile-width) {
+      font-size: 4.0rem;
+    }
+  }
+
+  p {
+    line-height: 2.6rem;
+    margin: 0;
+    padding: 100px 0 200px 0;
+
+    @media (max-width: $max-mobile-width) {
+      padding: 20px 0 300px 0;
+    }
+  }
+}
+
+.instruction-header {
+  height: 400px;
+}
+
+.instruction-footer {
+  height: 400px;
+}
+
+.instruction-figure {
+  background-color: #555555;
+  display: block;
+  position: relative;
+
+  .iot-board {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 353px;
+    position: absolute;
+    width: 500px;
+
+    &.step-1 {
+      background-image: url('../images/board_01.png');
+    }
+  }
+
+  .iot-board-shadow {
+    display: block;
+    background-image: url('../images/board_shadow_03.svg');
+    background-position: left top;
+    background-repeat: no-repeat;
+    background-size: 996px 870px;
+    height: 870px;
+    opacity: 0.5;
+    position: absolute;
+    width: 540px;
+  }
+}
+
+.instruction-figures {
+  float: left;
+  padding: 50px 0 0 0;
+  width: 540px;
+
+  @media (max-width: $max-mobile-width) {
+    display: none;
+  }
+}
+
+.instruction-content {
+  background-color: #ffffff;
+  float: right;
+  height: 100%;
+  padding: 120px 50px 0 50px;
+  width: 360px;
+
+  @media (max-width: $max-mobile-width) {
+    float: none;
+    height: auto;
+    margin: 0 auto;
+    padding: 50px 5% 0 5%;
+    width: 94%;
+  }
+}
+
+.instruction-sections {
+  background-color: #e3ecec;
+  overflow: hidden;
+}
