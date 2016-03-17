@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>IoT Service Kit by Futurice</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+    <link rel="icon" type="image/png" href="//static.flockler.com/assets/futurice/images/favicon-a7ce11bea82dc11b95c919be2ed4d7ed.png">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <link href="//vjs.zencdn.net/4.12/video-js.css" rel="stylesheet">
+    <script src="//vjs.zencdn.net/4.12/video.js"></script>
+    <script src="//use.typekit.net/yvs3xkq.js"></script>
+    <script>try{Typekit.load();}catch(e){}</script>
+    <link rel="stylesheet" type="text/css" href="css/iot-service-kit-all.css" media="screen">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.2/TweenMax.min.js"></script>
+  </head>
+  <body>
+    <header class="instruction-header">
+      header
+    </header>
+    <div id="instruction-bg" class="instruction-sections">
+      <section id="step-1" class="instruction-section red">
+        <div class="instruction-figures">
+          <figure id="pin" class="instruction-figure">
+            <div class="iot-board-shadow"></div>
+            <div class="iot-board step-1"></div>
+          </figure>
+        </div>
+        <div class="instruction-content">
+          <h1 class="heading-1">Physical space</h1>
+          <p>The kit was made to support your creative process on IoT projects that involve physical spaces.</p>
+          <p>You normally should start with the context and a representation of the physical space in your project or idea.</p>
+          <p>The blueprints provided in the kit are generic scenarios to kick-start your creativity.</p>
+        </div>
+      </section>
+      <section id="step-2" class="instruction-section blue">
+        <div class="instruction-content">
+          <h1 class="heading-1">User Journeys</h1>
+          <p>Looking at the blueprint you have the bigr picture of the possible user-journeys.</p>
+          <p>Focus on the problem you need to solve and look at it from a journey prespective, single steps and interactions that develop along the journey.</p>
+        </div>
+      </section>
+      <section id="step-3" class="instruction-section orange">
+        <div class="instruction-content">
+          <h1 class="heading-1">Interactions</h1>
+          <p>The kit was made to support your creative process on IoT projects that involve physical spaces.</p>
+        </div>
+      </section>
+      <section id="step-4" class="instruction-section blue-green">
+        <div class="instruction-content">
+          <h1 class="heading-1">Service Journey</h1>
+          <p>The kit was made to support your creative process on IoT projects that involve physical spaces.</p>
+        </div>
+      </section>
+      <section id="step-5" class="instruction-section green">
+        <div class="instruction-content">
+          <h1 class="heading-1">Outputs</h1>
+          <p>The kit was made to support your creative process on IoT projects that involve physical spaces.</p>
+        </div>
+      </section>
+      <section class="instruction-section green">
+        <div class="instruction-content">
+          <p>The kit was made to support your creative process on IoT projects that involve physical spaces.</p>
+        </div>
+      </section>
+    </div>
+    <footer class="instruction-footer">
+      footer
+    </footer>
+  </body>
+  <script>
+    var controller = new ScrollMagic.Controller();
+    $(function () {
+      // var tween = TweenMax.to("#instruction-bg", 0.5, {rotationY: 180});
+      var scene = new ScrollMagic.Scene({triggerElement: "#pin", offset: 156, duration: "1130%"})
+        .setPin("#pin")
+        // .addIndicators({name: "2 (duration: 0)"}) // add indicators (requires plugin)
+        .addTo(controller);
+
+      var tweenRed = TweenMax.to("#instruction-bg", 1, {backgroundColor: "#ff5140"});
+      var tweenBlue = TweenMax.to("#instruction-bg", 1, {backgroundColor: "#003440", ease: Quint.easeInOut});
+      var tweenOrange = TweenMax.to("#instruction-bg", 1, {backgroundColor: "#ff821f"});
+      var tweenBlueGreen = TweenMax.to("#instruction-bg", 1, {backgroundColor: "#00594a"});
+      var tweenGreen = TweenMax.to("#instruction-bg", 1, {backgroundColor: "#40b045"});
+
+      // var tweenRed = TweenMax.to("#instruction-bg", 1, {backgroundColor: "#ffa8a0"});
+      // var tweenBlue = TweenMax.to("#instruction-bg", 1, {backgroundColor: "#809aa0", ease: Quint.easeInOut});
+      // var tweenOrange = TweenMax.to("#instruction-bg", 1, {backgroundColor: "#ffc18f"});
+      // var tweenBlueGreen = TweenMax.to("#instruction-bg", 1, {backgroundColor: "#80aca5"});
+      // var tweenGreen = TweenMax.to("#instruction-bg", 1, {backgroundColor: "#a0d8a2"});
+
+      new ScrollMagic.Scene({triggerElement: "#step-1", duration: "80%"})
+        .setTween(tweenRed)
+        // .addIndicators({name: "red"})
+        .addTo(controller);
+
+      new ScrollMagic.Scene({triggerElement: "#step-2", offset: -100, duration: '80%'})
+        .setTween(tweenBlue)
+        // .addIndicators({name: "blue"})
+        .addTo(controller);
+
+      new ScrollMagic.Scene({triggerElement: "#step-3", offset: -100, duration: '80%'})
+        .setTween(tweenOrange)
+        // .addIndicators({name: "orange"})
+        .addTo(controller);
+
+      new ScrollMagic.Scene({triggerElement: "#step-4", offset: -100, duration: '80%'})
+        .setTween(tweenBlueGreen)
+        // .addIndicators({name: "blue green"})
+        .addTo(controller);
+
+      new ScrollMagic.Scene({triggerElement: "#step-5", offset: -100, duration: '80%'})
+        .setTween(tweenGreen)
+        // .addIndicators({name: "green"})
+        .addTo(controller);
+
+    });
+  </script>
+</html>
