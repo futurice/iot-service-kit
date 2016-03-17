@@ -113,95 +113,115 @@
   </body>
   <script>
     var controller = new ScrollMagic.Controller();
+    var showIndicators = false;
+
     $(function () {
-      var scene = new ScrollMagic.Scene({triggerElement: "#pin", offset: 140, duration: "1130%"})
-        .setPin("#pin")
-        // .addIndicators({name: "2 (duration: 0)"}) // add indicators (requires plugin)
-        .addTo(controller);
 
-      var tweenRed = TweenMax.to("#instruction-bg", 1, {backgroundColor: "#ff5140"});
-      var tweenBlue = TweenMax.to("#instruction-bg", 1, {backgroundColor: "#003440", ease: Quint.easeInOut});
-      var tweenOrange = TweenMax.to("#instruction-bg", 1, {backgroundColor: "#ff821f"});
-      var tweenBlueGreen = TweenMax.to("#instruction-bg", 1, {backgroundColor: "#00594a"});
-      var tweenGreen = TweenMax.to("#instruction-bg", 1, {backgroundColor: "#40b045"});
+      function linkAnimation(triggerElement, animation, offset, duration) {
+        var scene = new ScrollMagic.Scene({
+          triggerElement: triggerElement,
+          offset: offset,
+          duration: duration || animation.totalDuration() * 100
+        })
+          .setTween(animation)
+          .addTo(controller);
 
+        if (showIndicators) {
+          scene.addIndicators({ name: triggerElement })
+        }
+      }
 
-      var enlargeSmartBeaconCard = TweenMax.to("#smart-beacon-card", 1, {
-        rotation: 2,
-        x: 65,
-        y: 45
-      });
-      var shrinkSmartBeaconCard = TweenMax.to("#smart-beacon-card", 1, {
-        scale: 0.25,
-        rotation: 10,
-        x: 0,
-        y: 0,
-        ease: Cubic.easeInOut
-      });
-      var showSmartBeaconArea = TweenMax.to("#smart-beacon-area", 1, {
-        opacity: 1.0,
-        ease: Cubic.easeIn
-      });
-      var enlargeSmartPhoneCard = TweenMax.to("#smart-phone-card", 1, {
-        rotation: -4,
-        x: -60,
-        y: 55
-      });
-      var shrinkSmartPhoneCard = TweenMax.to("#smart-phone-card", 1, {
-        scale: 0.25,
-        rotation: -2,
-        x: 0,
-        y: 0,
-        ease: Cubic.easeInOut
-      });
+      function linkPin(triggerElement, pinElement, offset, duration) {
+        var scene = new ScrollMagic.Scene({
+          triggerElement: triggerElement,
+          offset: offset,
+          duration: duration
+        })
+          .setPin(pinElement)
+          .addTo(controller);
 
+        if (showIndicators) {
+          scene.addIndicators({ name: triggerElement })
+        }
+      }
 
-      new ScrollMagic.Scene({triggerElement: "#step-1", duration: "80%"})
-        .setTween(tweenRed)
-        // .addIndicators({name: "red"})
-        .addTo(controller);
+      function createBackgroundColorAnimation(color) {
+        var backgroundContainer = '#instruction-bg';
+        return TweenMax
+          .to(backgroundContainer, 1, {
+            backgroundColor: color
+          });
+      }
 
-      new ScrollMagic.Scene({triggerElement: "#step-2", offset: -100, duration: '80%'})
-        .setTween(tweenBlue)
-        // .addIndicators({name: "blue"})
-        .addTo(controller);
+      function createStep3SmartBeaconAnimation() {
+        var smartBeaconCard = '#smart-beacon-card';
+        var smartBeaconArea = '#smart-beacon-area';
+        return new TimelineMax()
+          .addLabel('move-in')
+          .to(smartBeaconCard, 0.3, {
+            opacity: 1
+          }, 'move-in')
+          .to(smartBeaconCard, 1.5, {
+            rotation: 2,
+            x: 10,
+            y: 50
+          }, 'move-in')
+          .addLabel('shrink', '+=0.5')
+          .to(smartBeaconCard, 1, {
+            scale: 0.25,
+            rotation: 10,
+            x: 0,
+            y: 0,
+            ease: Cubic.easeInOut
+          }, 'shrink')
+          .to(smartBeaconArea, 1, {
+            opacity: 1.0,
+            ease: Cubic.easeIn
+          }, 'shrink');
+      }
 
-      new ScrollMagic.Scene({triggerElement: "#step-3", offset: -100, duration: '80%'})
-        .setTween(tweenOrange)
-        // .addIndicators({name: "orange"})
-        .addTo(controller);
+      function createStep3SmartPhoneAnimation() {
+        var smartPhoneCard = '#smart-phone-card';
+        return new TimelineMax()
+          .addLabel('move-in')
+          .to(smartPhoneCard, 0.3, {
+            opacity: 1
+          }, 'move-in')
+          .to(smartPhoneCard, 1.5, {
+            rotation: -4,
+            x: -60,
+            y: 55
+          }, 'move-in')
+          .addLabel('shrink', '+=0.5')
+          .to(smartPhoneCard, 1, {
+            scale: 0.25,
+            rotation: -2,
+            x: 0,
+            y: 0,
+            ease: Cubic.easeInOut
+          }, 'shrink')
+      }
 
-      new ScrollMagic.Scene({triggerElement: "#step-4", offset: -100, duration: '80%'})
-        .setTween(tweenBlueGreen)
-        // .addIndicators({name: "blue green"})
-        .addTo(controller);
+      function createStep3Story(offset) {
+        linkAnimation('#step-3-2', createStep3SmartBeaconAnimation(), -240);
+        linkAnimation('#step-3-3', createStep3SmartPhoneAnimation(), -240);
+      }
 
-      new ScrollMagic.Scene({triggerElement: "#step-5", offset: -100, duration: '80%'})
-        .setTween(tweenGreen)
-        // .addIndicators({name: "green"})
-        .addTo(controller);
+      function createBackgroundColorStory() {
+        linkAnimation('#step-1', createBackgroundColorAnimation('#ff5140'), 0, '60%');
+        linkAnimation('#step-2', createBackgroundColorAnimation('#003440'), -100, '60%');
+        linkAnimation('#step-3', createBackgroundColorAnimation('#ff821f'), -100, '60%');
+        linkAnimation('#step-4', createBackgroundColorAnimation('#00594a'), -100, '60%');
+        linkAnimation('#step-5', createBackgroundColorAnimation('#40b045'), -100, '60%');
+      }
 
+      function createBoardStory() {
+        linkPin('#pin', '#pin', 140, '1130%');
+      }
 
-      new ScrollMagic.Scene({triggerElement: "#step-3-2", offset: -260, duration: 200})
-        .setTween(enlargeSmartBeaconCard)
-        // .addIndicators({name: "step-3-2"})
-        .addTo(controller);
-      new ScrollMagic.Scene({triggerElement: "#step-3-2", offset: -20, duration: 100})
-        .setTween(shrinkSmartBeaconCard)
-        // .addIndicators({name: "step-3-2"})
-        .addTo(controller);
-      new ScrollMagic.Scene({triggerElement: "#step-3-2", offset: 0, duration: 100})
-        .setTween(showSmartBeaconArea)
-        .addTo(controller);
-
-      new ScrollMagic.Scene({triggerElement: "#step-3-3", offset: -260, duration: 200})
-        .setTween(enlargeSmartPhoneCard)
-        // .addIndicators({name: "step-3-3"})
-        .addTo(controller);
-      new ScrollMagic.Scene({triggerElement: "#step-3-3", offset: -20, duration: 100})
-        .setTween(shrinkSmartPhoneCard)
-        // .addIndicators({name: "step-3-3"})
-        .addTo(controller);
+      createBoardStory();
+      createBackgroundColorStory();
+      createStep3Story();
 
     });
   </script>

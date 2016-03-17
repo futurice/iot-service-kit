@@ -706,6 +706,7 @@ a {
   background-size: 100% 100%;
   box-shadow: 1px 1px 2px 0 rgba(0,0,0,0.2);
   height: 200px;
+  opacity: 0.0;
   position: absolute;
   width: 200px;
 
@@ -713,15 +714,14 @@ a {
     background-image: url('../images/card_smart_beacon.jpg');
     left: 295px;
     top: 120px;
-    transform: scale(1) translateX(60px) translateY(800px);
+    transform: scale(1) translateX(20px) translateY(400px);
   }
 
   &.smart-phone {
     background-image: url('../images/card_smart_phone.jpg');
     left: 185px;
-    opacity: 1.0;
     top: 120px;
-    transform: scale(1) rotate(-12deg) translateX(-150px) translateY(800px);
+    transform: scale(1) rotate(-12deg) translateX(-150px) translateY(400px);
   }
 }
 
