@@ -1,2 +1,5 @@
 build/node_modules
 general.css
+.DS_Store
+build
+npm-debug.log
