@@ -1,0 +1,551 @@
+/*!
+ * Start Bootstrap - Createive v4.0.0-alpha (http://startbootstrap.com/template-overviews/creative)
+ * Copyright 2013-2017 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-creative/blob/master/LICENSE)
+ */
+ 
+@font-face {
+    font-family: 'Futurice-Bold'; /*a name to be used later*/
+    src: url('../fonts/Futurice-Bold.otf'); /*URL to font*/
+}
+@font-face {
+    font-family: 'Futurice-Monospaced'; /*a name to be used later*/
+    src: url('../fonts/Futurice-Monospaced.otf'); /*URL to font*/
+}
+@font-face {
+    font-family: 'Futurice-Regular'; /*a name to be used later*/
+    src: url('../fonts/Futurice-Regular.otf'); /*URL to font*/
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+   }
+
+body {
+  font-family: 'Futurice-Regular', 'Futurice-Monospaced', 'Futurice-Bold';
+}
+
+
+a {
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  transition: all 0.2s;
+  color: #F05F40; }
+  a:hover, a:focus {
+    color: #f05f40; }
+
+
+.bg-primary {
+  background-color: #F05F40 !important; }
+
+.bg-dark {
+  background-color: #222222 !important;
+  color: white; }
+
+.text-faded {
+  color: rgba(255, 255, 255, 0.7); }
+
+section {
+  padding: 0; 
+ }
+
+
+.section-heading {
+  margin-top: 0; }
+
+.no-padding {
+  padding: 0; }
+
+::-moz-selection {
+  color: white;
+  text-shadow: none;
+  background: #222222; }
+
+::selection {
+  color: white;
+  text-shadow: none;
+  background: #222222; }
+
+img::selection {
+  color: white;
+  background: transparent; }
+
+img::-moz-selection {
+  color: white;
+  background: transparent; }
+
+body {
+  -webkit-tap-highlight-color: #222222; }
+
+#mainNav {
+  background-color: white;
+  border-color: rgba(34, 34, 34, 0.05);
+  font-family: 'Futurice-Regular', 'Futurice-Monospaced', 'Futurice-Bold';
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  transition: all 0.2s; }
+  #mainNav .navbar-brand {
+    color: #F05F40;
+    font-family: 'Futurice-Regular', 'Futurice-Monospaced', 'Futurice-Bold';
+    font-weight: 700;
+    }
+    #mainNav .navbar-brand:hover, #mainNav .navbar-brand:focus {
+      color: #f05f40; }
+  #mainNav .navbar-toggle {
+    font-weight: 700;
+    font-size: 12px;
+    color: #222222;
+  }
+  #mainNav .navbar-nav > li.nav-item > a.nav-link,
+  #mainNav .navbar-nav > li.nav-item > a.nav-link:focus {
+    font-weight: 700;
+    font-size: 13px;
+    color: #222222; }
+    #mainNav .navbar-nav > li.nav-item > a.nav-link:hover,
+    #mainNav .navbar-nav > li.nav-item > a.nav-link:focus:hover {
+      color: #F05F40; }
+    #mainNav .navbar-nav > li.nav-item > a.nav-link.active,
+    #mainNav .navbar-nav > li.nav-item > a.nav-link:focus.active {
+      color: #F05F40 !important;
+      background-color: transparent; }
+      #mainNav .navbar-nav > li.nav-item > a.nav-link.active:hover,
+      #mainNav .navbar-nav > li.nav-item > a.nav-link:focus.active:hover {
+        background-color: transparent; }
+  @media (min-width: 992px) {
+    #mainNav {
+      background-color: transparent;
+      border-color: rgba(255, 255, 255, 0.3); }
+      #mainNav .navbar-brand {
+        color: rgba(255, 255, 255, 0.7); }
+        #mainNav .navbar-brand:hover, #mainNav .navbar-brand:focus {
+          color: white; }
+      #mainNav .navbar-nav > li.nav-item > a.nav-link,
+      #mainNav .navbar-nav > li.nav-item > a.nav-link:focus {
+        color: rgba(255, 255, 255, 0.7); }
+        #mainNav .navbar-nav > li.nav-item > a.nav-link:hover,
+        #mainNav .navbar-nav > li.nav-item > a.nav-link:focus:hover {
+          color: white; }
+      #mainNav.navbar-shrink {
+        background-color: white;
+        border-color: rgba(34, 34, 34, 0.05); }
+        #mainNav.navbar-shrink .navbar-brand {
+          color: #F05F40;
+          font-size: 16px; }
+          #mainNav.navbar-shrink .navbar-brand:hover, #mainNav.navbar-shrink .navbar-brand:focus {
+            color: #f05f40; }
+        #mainNav.navbar-shrink .navbar-nav > li.nav-item > a.nav-link,
+        #mainNav.navbar-shrink .navbar-nav > li.nav-item > a.nav-link:focus {
+          color: #222222; }
+          #mainNav.navbar-shrink .navbar-nav > li.nav-item > a.nav-link:hover,
+          #mainNav.navbar-shrink .navbar-nav > li.nav-item > a.nav-link:focus:hover {
+            color: #F05F40; } }
+
+header.masthead {
+  position: relative;
+  width: 100%;
+  min-height: auto;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+  background-position: center;
+  background-image: url("../img/Cover.gif");
+  background-repeat: no-repeat;
+  text-align: center;
+  color: white; }
+  header.masthead .header-content {
+    position: relative;
+    text-align: center;
+    padding: 100px 15px 100px;
+    width: 100%; }
+    header.masthead .header-content .header-content-inner h1 {
+      font-weight: 700;
+      margin-top: 0;
+      margin-bottom: 0;
+      font-size: 30px; }
+    
+  @media (min-width: 768px) {
+    header.masthead {
+      height: 100%;
+      min-height: 600px; }
+      header.masthead .header-content {
+        position: absolute;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+        padding: 0 50px; }
+        header.masthead .header-content .header-content-inner {
+          max-width: 1000px;
+          margin-left: auto;
+          margin-right: auto; }
+          header.masthead .header-content .header-content-inner h1 {
+            font-family: 'Futurice-Bold';
+            font-size: 52px;
+            line-height: 68px;
+             }
+          }
+
+
+
+.icon{
+  display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 30px;
+}
+
+
+.icon-long{
+  display: inline-block;
+    margin-right: auto;
+    height: 75px;
+}
+
+
+
+.logo{
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100px;
+}
+
+.icon-twitter{
+  display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 40px;
+}
+
+
+
+.icon-small{
+  display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 16px;
+
+}
+
+/*
+   <--------------------------- Row options ------------------------------------>
+*/
+
+.row.normal{
+  display: flex;
+  height: 40vh;
+}
+
+
+
+.row.half{
+  height: 30vh;
+  display:flex;
+  flex-direction: column; 
+}
+
+.row.double{
+  display:flex;
+  height: 60vh;
+}
+
+
+ .row > [class*='col'] {
+     flex-direction: column;
+     display: flex;
+    
+      
+}
+
+ .row > [class*='col'].border {
+     border-style: solid;
+     border-color: white;
+     border-width: 1px;
+     
+}
+
+ .row > [class*='col'].border-right {
+      border-right: 1px solid white;
+     
+}
+
+
+ .row.border-right {
+      border-right: 1px solid white;
+     
+}
+
+/*
+   <--------------------------- Alignment options ------------------------------------>
+*/
+
+
+.content-up{
+    padding: 20px;
+    overflow: hidden;
+}
+
+.content-bottom{
+
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start; 
+  padding: 20px;
+  overflow: hidden;
+}
+
+.content-center {
+  display: flex;
+  align-items: center; 
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+
+
+/*
+   <--------------------------- IMG options ------------------------------------>
+*/
+
+
+div.center-cropped {
+    overflow: hidden;
+    padding:0;
+}
+
+.img-box{
+    width: 100%; /* or whatever is required */
+    text-align: center; /* ensures the image is always in the h-middle */
+    overflow: hidden; /* hide the cropped portion */
+    padding: 0;
+}
+
+
+div.center-cropped img {
+    width: 100%;
+    margin: 0;
+    top: 50%;
+    position: relative;
+    transform: translateY(-50%);
+    padding:0;
+    
+}
+
+
+
+.fullsize{
+  max-width:100%;
+  max-height:100%;
+  object-fit: contain;
+}
+
+
+
+/*
+   <--------------------------- Text formats ------------------------------------>
+*/
+
+.white-color{
+  color:#ffffff
+}
+
+.grey-color{
+  color: #333333;
+}
+
+.text-section-title{
+    font-family: 'Futurice-Bold';
+    font-size: 48px;
+    line-height: 60px;
+}
+
+.textA {
+    font-family: 'Futurice-Regular';
+    font-size: 22px;
+    line-height: 32px;
+}
+
+.textA-slim {
+    font-family: 'Futurice-Regular';
+    font-size: 22px;
+    line-height: 26px;
+}
+
+.textA-Bold-slim {
+    font-family: 'Futurice-Bold';
+    font-size: 32px;
+    line-height: 36px;
+}
+
+.textA-Bold {
+    font-family: 'Futurice-Bold';
+    font-size: 32px;
+    line-height: 42px;
+}
+
+.textB {
+    font-family: 'Futurice-Regular';
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.titleB{
+
+  font-family: 'Futurice-Regular';
+  font-size: 26px;
+  line-height: 32px;
+}
+
+.text-label{
+  font-family: 'Futurice-Bold';
+  font-size: 48px;
+  line-height: 58px;
+}
+
+.text-closing{
+  font-family: 'Futurice-Regular';
+  font-size: 48px;
+  line-height: 60px;
+}
+
+.futurice{
+  font-family: 'Futurice-Monospaced';
+  font-size: 32px;
+  line-height: 48px;
+
+
+}
+
+
+
+/*
+   <--------------------------- Video flex ------------------------------------>
+*/
+
+
+.flex-video {
+  position: relative;
+  padding-top: 25px;
+  padding-bottom: 67.5%;
+  height: 0;
+  margin-bottom: 16px;
+  overflow: hidden;
+}
+
+.flex-video.widescreen { padding-bottom: 57.25%; }
+.flex-video.vimeo { padding-top: 0; }
+
+.flex-video iframe,
+.flex-video object,
+.flex-video embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+@media only screen and (max-device-width: 800px), only screen and (device-width: 1024px) and (device-height: 600px), only screen and (width: 1280px) and (orientation: landscape), only screen and (device-width: 800px), only screen and (max-width: 767px) {
+  .flex-video { padding-top: 0; }
+}
+
+
+/*
+   <--------------------------- Cards features ------------------------------------>
+*/
+
+.card {
+  position: relative;
+  float: left;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.card-front,
+.card-back {
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-transition: -webkit-transform 0.5s;
+          transition: transform 0.5s;
+}
+
+.blueprints-front {
+  width:100%;
+  height: 100%;
+  background-repeat:no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-image: url("../img/Components_blueprints.jpg");
+}
+
+.blueprints-back {
+   background-color: #515151; 
+  -webkit-transform: rotateY(-180deg);
+          transform: rotateY(-180deg);
+}
+
+
+.tokens-front {
+  width:100%;
+  height: 100%;
+  background-repeat:no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-image: url("../img/Components_tokens.jpg");
+}
+
+.tokens-back {
+   background-color: #F05245; 
+  -webkit-transform: rotateY(-180deg);
+          transform: rotateY(-180deg);
+}
+
+.cards-front{
+    width:100%;
+    height: 100%;
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-image: url("../img/Components_cards.jpg");
+}
+
+.cards-back{
+    background-color: #00B3B3; 
+    -webkit-transform: rotateY(-180deg);
+    transform: rotateY(-180deg);
+}
+
+.whatever-front{
+  background-color: #F7803C;
+}
+
+.whatever-back{
+  background-color: #F7803C;
+  -webkit-transform: rotateY(-180deg);
+          transform: rotateY(-180deg);
+}
+
+.card.effect-hover:hover .card-front {
+  -webkit-transform: rotateY(-180deg);
+          transform: rotateY(-180deg);
+}
+
+.card.effect-hover:hover .card-back {
+  -webkit-transform: rotateY(0);
+          transform: rotateY(0);
+}
