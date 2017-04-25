@@ -261,6 +261,27 @@ header.masthead {
   height:100%;
 }
 
+@media screen and (max-width: 768px) {
+
+.hero-video{
+  visibility: hidden;
+}
+
+.gif{
+  width:100%;
+  height: 100%;
+  background-repeat:no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-image: url("img/Cover_mobile.jpg");
+
+}
+
+}
+
+
+
+
 
 
 
@@ -457,7 +478,7 @@ header.masthead {
 
 .row [class*='col'] .inner-wrap { 
     width:100%;
-    height: 100%;
+    height: 30vh;
     background-size: cover;
     background-position: center center;
     background-color: #eee;
@@ -466,7 +487,7 @@ header.masthead {
 
 .row [class*='col'] .inner-wrap.white { 
     width:100%;
-    height: 100%;
+    height: 30vh;
     background-size: cover;
     background-position: center center;
     background-color: white;
