@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   viewBox="0 0 305.6 305.6"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="ICO_facebook.svg">
+  <metadata
+     id="metadata14">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>IoT_logoArtboard 2</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="702"
+     inkscape:window-height="480"
+     id="namedview12"
+     showgrid="false"
+     inkscape:zoom="0.77225129"
+     inkscape:cx="154.09492"
+     inkscape:cy="152.8"
+     inkscape:window-x="1440"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg2" />
+  <defs
+     id="defs4">
+    <style
+       id="style6">.cls-1{fill:#fff;}</style>
+  </defs>
+  <title
+     id="title8">IoT_logoArtboard 2</title>
+  <g
+     id="White"
+     style="fill:#f05f40;fill-opacity:1">
+    <path
+       id="White-2"
+       data-name="White"
+       class="cls-1"
+       d="M271.52,19.35H34.08A14.73,14.73,0,0,0,19.35,34.08V271.52a14.73,14.73,0,0,0,14.73,14.73H161.91V182.89H127.13V142.61h34.78V112.91c0-34.47,21.05-53.24,51.81-53.24a285.37,285.37,0,0,1,31.08,1.59v36H223.47c-16.72,0-20,7.95-20,19.61v25.72h39.89l-5.19,40.28H203.5V286.25h68a14.73,14.73,0,0,0,14.73-14.73V34.08A14.73,14.73,0,0,0,271.52,19.35Z"
+       style="fill:#f05f40;fill-opacity:1" />
+  </g>
+</svg>
