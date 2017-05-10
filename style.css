@@ -36,11 +36,6 @@
     --container-wide-width: 90%;
   }
 }
-/*@media screen and (min-width: 1250px) {
-  :root{
-    --container-narrow-width: 50%;
-  }
-}*/
 @media screen and (min-width: 1350px) {
   :root{
     --container-width: 1000px;
@@ -61,7 +56,7 @@ body {
   font-size: 16px;
   font-weight: 400;
   line-height: 1.3;
-  color: #333;
+  color: var(--dark);
 }
 @media screen and (min-width: 500px) {
   html, body {
@@ -178,10 +173,9 @@ h3,
     height: 3.5em;
     margin-bottom: 0;
   }
-  /*p {*/
+
   .row-element > p {
     margin-top: 0;
-    /*font-size: 0.8em;*/
   }
 }
 
@@ -210,6 +204,7 @@ h3,
   .sidebyside {
     display: flex;
     align-items: center;
+    margin-bottom: 4em;
   }
   .sidebyside.right {
     flex-direction: row-reverse;
@@ -469,6 +464,13 @@ h3,
 }
 .contact .row-element {
   margin-bottom: 1em;
+}
+/* hack: fix height of job titles in contact section */
+@media screen and (min-width: 800px) and (max-width: 1020px) {
+  .contact > p.fixed-height {
+    height: 5em;
+    margin-bottom: 0;
+  }
 }
 .social-header {
   margin: 1em auto;
