@@ -1,574 +1,324 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <title>IoT Service Kit</title>
-
-    <!-- Bootstrap core CSS -->
-    <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Plugin CSS -->
-    <link href="lib/magnific-popup/magnific-popup.css" rel="stylesheet">
-    <link href="lib/flickity/flickity.css" rel="stylesheet">
-
-    <!-- Custom styles for this template -->
-    <link href="style.css" rel="stylesheet">
-
-
-    <link rel="icon" type="image/png" href="//static.flockler.com/assets/futurice/images/favicon-a7ce11bea82dc11b95c919be2ed4d7ed.png">
-
-    <!-- Temporary navbar container fix -->
-    <style>
-        .navbar-toggler {
-            z-index: 1;
-        }
-        
-        @media (max-width: 576px) {
-            nav>.container {
-                width: 100%;
-            }
-        }
-    </style>
-
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IoT Service Kit</title>
+  <link rel="stylesheet" href="lib/flickity.css">
+  <link rel="stylesheet" href="style.css">
 </head>
+<body>
 
-<body id="page-top">
+  <nav class="nav" id="nav">
+    <a class="top-logo" href="#">IoT Service Kit</a>
+  </nav>
 
-    <!-- Navigation -->
-    <!-- Navigation -->
-    <nav class="navbar fixed-top navbar-toggleable-md navbar-light" id="mainNav">
-        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarExample" aria-controls="navbarExample"
-            aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="container">
-            <a class="navbar-brand" href="#page-top">IoT service Kit</a>
-            <div class="collapse navbar-collapse" id="navbarExample">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#intro">Intro</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#vid">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#theKit">The Kit</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#download">Download</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#opensource">Open Source</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact</a>
-                    </li>
+  <section id="cover" class="cover">
+    <!-- <img class="background-vid" src="assets/cover-static.jpg"> -->
+    <video loop autoplay class="background-vid" src="assets/cover.mp4"></video>
+    <div class="cover-content container">
+      <h1 class="main-title">Creating IoT Services has never been&nbspeasier</h1>
+      <a class="button" href="https://github.com/futurice/iot-service-kit/archive/master.zip">Download the Kit</a>
+    </div>
+    <img class="scrolldown-arrow" src="assets/icons/scrolldown-arrow.svg">
+  </section>
 
-                </ul>
-            </div>
-        </div>
-    </nav>
+  <section id="intro" class="intro container narrow">
+    <p class="large-paragraph">
+      The IoT Service Kit brings domain experts together out of their silos to design experience-driven IoT&nbspservices.
+    </p>
+    <!-- <p class="large-paragraph">
+      The goal is to let user experience drive the process of merging physical and digital realities into successful digital&nbspservices.
+    </p> -->
 
-    <header class="masthead">
-        <video class="hero-video" autoplay loop src="img/Cover.mp4"></video>
-        <div class="header-content gif">
-            <div class="header-content-inner">
-                <h1 id="homeHeading">Creating IoT Services has never been easier</h1>
-                <hr>
-                <p class="grey-color">The IoT Service Kit brings domain experts together out of their silos to co-create and simulate IoT concepts
-                    in the real world.</p>
-                <a class="btn btn-primary btn-xl" href="#intro">Discover How</a>
-            </div>
-        </div>
-    </header>
-
-
-    <section id="intro">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12 content-center">
-                    <h2 class="section-heading">The IoT Service Kit is a co-creative tool for exploring user-centric interactive scenarios. The goal
-                        is to let user experience drive the process of merging physical and digital realities into successful
-                        digital services.</h2>
-                    <br>
-                </div>
-            </div>
-        </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4 text-center">
-                    <div class="row normal walls-gif">
-                    </div>
-                    <div class="row">
-                        <div class="content-center">
-                            <h3 class="block-title grey-color">Achieve mutual understanding</h3>
-                            </br>
-                            <p class="block-text grey-color left">Clashes and miscommunication between differing perspectives and disciplines can disrupt workflow.
-                                The playful nature of the kit brings down walls and naturally incites communication, while
-                                rapid iteration and a shared mindset create a flow where everyone can participate on the
-                                same level</p>
-                        </div>
-
-                    </div>
-
-
-                </div>
-                <div class="col-md-4 text-center">
-                    <div class="row normal sharing-gif">
-                    </div>
-                    <div class="row">
-                        <div class="content-center">
-                            <h3 class="block-title grey-color">Become tangible</h3>
-                            </br>
-                            <p class="block-text grey-color left">The world of IoT is an abstract one, and abstract concepts are difficult to talk about. Simply
-                                rearranging tokens on the IoT Service Kit blueprint enables teams to make concepts tangible
-                                by physically demonstrating those ideas.</p>
-                        </div>
-
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="row normal complex-gif">
-
-                    </div>
-                    <div class="row">
-                        <div class="content-center">
-                            <h3 class="block-title grey-color">Make complex simple</h3>
-                            </br>
-                            <p class="block-text grey-color left">Not everyone is fully immersed into the tech world, but that shouldn’t keep people from designing
-                                with technology. The IoT Service Kit presents a comprehensive scope of current technology
-                                that enables everyone to understand and implement IoT. </p>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <section class="vid no-padding" id="vid">
-        <div class="container">
-            <div class="row">
-                <div class="col">
-                    <div class="flex-video vimeo widescreen">
-                        <iframe id="video-iframe" src="https://player.vimeo.com/video/145110948?color=42b04a" webkitallowfullscreen mozallowfullscreen
-                            allowfullscreen></iframe>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </section>
-
-
-    <section id="theKit">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12 content-center">
-                    <h1 class="section-title">The IoT Service Kit consists of three major components: blueprints, tokens and cards. </h1>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-4 content-center">
-                    <div class="row normal blueprints">
-                    </div>
-                    <div class="row">
-                        <div class="content-center">
-                            <h3 class="block-title grey-color">Blueprints</h3>
-                            <p class="block-text grey-color left">The blueprints provide a general environmental context. Create your own to fit your project’s
-                                needs.
-                            </p>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 content-center">
-                    <div class="row normal tokens">
-                    </div>
-                    <div class="row">
-                        <div class="content-center">
-                            <h3 class="block-title grey-color">Tokens</h3>
-                            <p class="block-text grey-color left">The 3D printed tokens are physical representations of the user, touchpoints, interactions, and
-                                services. They help visualise ideas.</p>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 content-center">
-                    <div class="row normal cards">
-                    </div>
-                    <div class="row">
-                        <div class="content-center">
-                            <h3 class="block-title grey-color">Cards</h3>
-                            <p class="block-text grey-color left">The game cards are divided into five categories: Sensors, Interaction, Service Cards, City Open
-                                API, and User Cards. They present a scope of technology.</p>
-
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-            <hr>
-            <div class="row">
-                <div class="col-md-12 content-center">
-                    <h1 class="section-title">How it works</h1>
-                </div>
-            </div>
-        </div>
-        <div class="gray-band-no-pad">
-            <div class="container">
-                <div class="row double">
-                    <div class="col-md-7 pic environment">
-                    </div>
-                    <div class="col-md-5 content-up-right">
-                        <h3 class="block-title grey-color">Choose the enviroment</h3>
-                        <p class="block-text grey-color"> IoT is all about the context. Builduing a smart home is completely different from developing a conference
-                            venue. </p>
-                        <p class="block-text grey-color">IoT Sevice Kit comes with a set of popular pre-designed maps. Choose the one which fits your needs
-                            the best or create your own map.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="container">
-            <div class="row double">
-
-
-                <div class="col-md-7 push-md-5 pic journey">
-
-                </div>
-
-                <div class="col-md-5 pull-md-7 content-up-left">
-                    <h3 class="block-title grey-color">Focus on the journey</h3>
-                    <p class="block-text grey-color"> IoT Services typically involves many different actors and participants. </p>
-                    <p class="block-text grey-color">IoT Service Kit tokens allow you to design detailed user journeys through your physical space</p>
-                </div>
-
-
-            </div>
-        </div>
-        <div class="gray-band-no-pad">
-            <div class="container">
-                <div class="row double">
-
-                    <div class="col-md-7 pic interactions">
-                    </div>
-                    <div class="col-md-5 content-up-right">
-                        <h3 class="block-title grey-color">Design interactions</h3>
-                        <p class="block-text grey-color"> Service is always a co-creation and IoT service is not an exception. </p>
-                        <p class="block-text grey-color"> ISK cards allow you to presisely design interactions between the user and the enviroment</p>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-        </div>
-
-
-
-
-        <div class="row row-margins">
-            <div class="col-md-12 content-center">
-                <h3 class="section-heading">By playing around with maps, tokens and cards you achieve a full Service Journey with at least three different
-                    outcomes.
-                </h3>
-            </div>
-        </div>
-        <div class="gray-band">
-            <div class="carousel-container">
-                <div class="carousel">
-                    <div class="carousel-cell">
-                        <img class="carousel-img" src="img/output_techpreview.jpg" />
-                        <div class="carousel-text">
-                            <h3 class="block-title grey-color">Tech Preview</h3>
-                            <p class="block-text grey-color">
-                                You will understand what types of devices and technology your service needs to exist.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="carousel-cell">
-                        <img class="carousel-img" src="img/output_userjourney.jpg" />
-                        <div class="carousel-text">
-                            <h3 class="block-title grey-color">User Journey</h3>
-                            <p class="block-text grey-color">
-                                A visualisation of all the steps and touchpoints that make your service, from the User perspective.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="carousel-cell">
-                        <img class="carousel-img" src="img/output_datamapping.jpg" />
-                        <div class="carousel-text">
-                            <h3 class="block-title grey-color">Data Mapping</h3>
-                            <p class="block-text grey-color">
-                                What kinds of data will you need or collect in each step.
-                            </p>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-        </div>
-    </section>
-
-    <section id="download">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12 content-center">
-                    <h2 class="section-title">Can't wait to test the Kit in action?</h2>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-4 content-center">
-                    <div class="inner-wrap content-center">
-
-                        <img src="img/icons/ICO_download.svg" class="img-fluid icon" alt="download">
-                        <br>
-                        <a class="btn btn-primary btn-xl" href="https://github.com/futurice/iot-service-kit/archive/master.zip">Download the Kit</a>
-
-                    </div>
-
-                </div>
-                <div class="col-md-4 content-center">
-
-                    <div class="inner-wrap content-center">
-                        <img src="img/icons/ICO_3d-printing.svg" class="img-fluid icon" alt="3d-printing">
-
-                        <p class="block-text margin">Print it yourself at any 3D printer</p>
-                    </div>
-                </div>
-                <div class="col-md-4 content-center">
-                    <div class="inner-wrap content-center">
-                        <img src="img/icons/ICO_service.svg" class="img-fluid icon" alt="service">
-                        <p class="block-text margin">Start creating awesome IoT services</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-
-
-    <div class="gray-band">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12 content-center">
-                    <h2 class="section-title">Prizes and honorable mentions</h2>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-4 content-center">
-                    <div class="inner-wrap white content-center">
-
-                        <p class="block-title grey-color">Winners - 2016</br> UX Magazine Award</p>
-                        <p class="block-text grey-color">Innovative Tool </br> or Technique"</p>
-
-
-                        <a href="http://uxmag.com/articles/announcing-winners-of-the-2016-ux-magazine-awards" target="_blank">
-                            <img src="img/logos/UXMag.png" class="img-fluid" alt="link">
-                        </a>
-                    </div>
-                </div>
-                <div class="col-md-4 content-center">
-                    <div class="inner-wrap white content-center">
-                        <p class="block-title grey-color">Finalists - 2016</br> Service Design Award</p>
-                        <p class="block-text grey-color">"Methodology"</p>
-                        <a href="https://www.service-design-network.org/headlines/iot-service-kit-futurice-gmbh" target="_blank">
-                            <img src="img/icons/LOGO-sdn.svg" class="img-fluid" alt="link">
-                        </a>
-
-
-
-                    </div>
-                </div>
-                <div class="col-md-4 content-center">
-                    <div class="inner-wrap white content-center">
-                        <p class="block-title grey-color">Recently presented at:</p>
-                        <a href="http://interaction17.ixda.org/" target="_blank">
-                            <img src="img/logos/conf.jpeg" class="img-fluid" alt="link">
-                        </a>
-
-
-
-                    </div>
-
-                </div>
-            </div>
-        </div>
+    <div class="sidebyside">
+      <img class="gif-icon" src="assets/intro-understanding.gif">
+      <div class="sidebyside-content">
+        <h3>Achieve mutual understanding</h3>
+        <p>Clashes and miscommunication between differing perspectives and disciplines can disrupt the workflow. The playful nature of the kit brings down walls and naturally incites communication.</p>
+      </div>
+    </div>
+    <div class="sidebyside right">
+      <img class="gif-icon" src="assets/intro-tangible.gif">
+      <div class="sidebyside-content">
+        <h3>Stay tangible</h3>
+        <p>The world of IoT is abstract and difficult to talk about. Simply rearranging tokens on the IoT Service Kit blueprint enables teams to make concepts tangible by physically demonstrating those ideas.</p>
+      </div>
+    </div>
+    <div class="sidebyside">
+      <img class="gif-icon" src="assets/intro-complex.gif">
+      <div class="sidebyside-content">
+        <h3>Make complex simple</h3>
+        <p>Not being fully immersed into the tech world shouldn’t keep people from designing with technology. The IoT Service Kit presents a comprehensive set of current technologies that enables everyone to understand and implement IoT.</p>
+      </div>
     </div>
 
+  </section>
 
+  <section id="video" class="video container">
+    <div class='embed-container'><iframe src='https://player.vimeo.com/video/145110948?color=42b04a' frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe></div>
+  </section>
 
-    <section id="opensource">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12 content-center">
-                    <h2 class="section-title">The project is entirely open-source</h1>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-12 content-center">
-                    <h3 class="section-heading">Openness is the key of our future. This Open-Source kit was created for everyone who wants to explore
-                        IoT, and create successful digital services, in a fun and realistic way.</h3>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-6 content-center">
-                    <img src="img/icons/github.svg" class="img-fluid icon" alt="github">
-                    <br>
-                    <p class="block-text left">We are looking forward to hear your ideas on how can we expand this tool. We are also curious about the
-                        way you use it and can't wait to see the services you can create with it!</p>
-                    <a class="btn btn-primary btn-xl" target="_blank" href="https://github.com/futurice/iot-service-kit">Check our github</a>
+  <section id="components" class="components container wide">
+    <h2 class="large-paragraph">
+      The Kit consists of three major components: blueprints, tokens and cards.
+    </h2>
+    <div class="row-container">
+      <div class="row-element three-columns">
+        <img class="row-img square-img"src="assets/components-blueprints.jpg">
+        <h3>Blueprints</h3>
+        <p>The blueprints provide a general environmental context. Create your own to fit your project’s needs.</p>
+      </div>
+      <div class="row-element three-columns">
+        <img class="row-img square-img" src="assets/components-tokens.jpg">
+        <h3>Tokens</h3>
+        <p>The 3D printed tokens are physical representations of users, touchpoints, interactions, and services. They help visualize ideas.</p>
+      </div>
+      <div class="row-element three-columns">
+        <img class="row-img square-img" src="assets/components-cards.jpg">
+        <h3>Cards</h3>
+        <p>There are five types of cards: Sensors, Interaction, Service Cards, City Open API, and User Cards.</p>
+      </div>
+    </div>
+  </section>
 
-                </div>
-                <div class="col-md-6 content-center">
-                    <img src="img/icons/ICO_iot-manifesto.svg" class="img-fluid icon" alt="github">
-                    <br>
-                    <p class="block-text left">IoT raises new ethical challenges, demading us to be more conscious about what we build. If you are curious
-                        about this please visit the IoT Manifesto and combine it with our kit.
-                    </p>
-                    <a class="btn btn-primary btn-xl" target="_blank" href="https://www.iotmanifesto.com/">iotmanifesto.com</a>
+  <hr>
 
-                </div>
-            </div>
+  <section id="howitworks" class="howitworks container wide">
+    <h2 class="large-paragraph">
+      How it works
+    </h2>
 
-    </section>
+    <div class="sidebyside">
+      <img class="sidebyside-img"src="assets/howitworks-environment.jpg">
+      <div class="sidebyside-content">
+        <h3>Choose the environment</h3>
+        <p>
+          IoT is all about the context. Builduing a smart home is completely different from developing a conference venue.
+        </p>
+        <p>
+          IoT Sevice Kit comes with a set of popular pre-designed maps. Choose the one which fits your needs the best or create your own map.
+        </p>
+      </div>
+    </div>
 
+    <div class="sidebyside right">
+      <img class="sidebyside-img"src="assets/howitworks-journey.jpg">
+      <div class="sidebyside-content">
+        <h3>Focus on the journey</h3>
+        <p>
+          IoT Services typically involve many different actors and participants. Tokens allow you to design detailed user journeys through your physical space
+        </p>
+      </div>
+    </div>
 
-    <section id="contact">
-        <div class="gray-band">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12 content-center">
-                        <h1 class="grey-color">Contact the Creators</h1>
-                    </div>
-                </div>
+    <div class="sidebyside">
+      <img class="sidebyside-img"src="assets/howitworks-interactions.jpg">
+      <div class="sidebyside-content">
+        <h3>Design Interactions</h3>
+        <p>
+          Service is always a co-creation and IoT service is not an exception. IoT Service Kit cards allow you to design interactions between the user and the enviroment.
+        </p>
+      </div>
+    </div>
 
+  </section>
 
-                <div class="row">
-                    <div class="col-md-6 content-center">
-                        <div class="row normal ricardo"> </div>
-                        <div class="row content-center">
-                            <p class="block-title no-padding">Ricardo Brito</p>
-                            <p>Service Designer &amp; UX</p>
-                            </br>
-                            <p class="no-padding">ricardo.brito@futurice.com </br>
-                                @toastedric</p>
-                        </div>
+  <section id="outcomes" class="outcomes gray">
+    <h2 class="large-paragraph container">
+      By playing around with maps, tokens, and cards you achieve a full Service Journey with at least three different outcomes.
+    </h2>
 
-                    </div>
-                    <div class="col-md-6 content-center">
-                        <div class="paul row normal"> </div>
-                        <div class="row content-center">
-                            <p class="block-title no-padding">Paul Haoughton</p>
-                            <p>Director, Wizardry and Developer</p>
-                            </br>
-                            <p class="no-padding">paul.houghton@futurice.com</br>
-                                @mobile_rat</p>
-                        </div>
+    <div class="carousel-tabs">
+      <div class="tab active" id="preview-tab">Tech Preview</div>
+      <div class="tab" id="journey-tab">User Journey</div>
+      <div class="tab" id="data-tab">Data Mapping</div>
+    </div>
 
+    <div class="carousel-container">
+      <div class="carousel">
 
-                    </div>
-                </div>
-                <hr>
-                <div class="row content-center">
-                    <h1>Find us on
-                    </h1>
-                </div>
-                <div class="social-icon-row">
-                    <a class="no-hover" href="https://www.facebook.com/futurice" target="_blank">
-                        <img src="img/icons/ICO_facebook.svg" class="img-fluid icon" alt="instagram">
-                    </a>
-                    <a class="no-hover" href="https://twitter.com/futurice" target="_blank">
-                        <img src="img/icons/ICO_twitter.svg" class="img-fluid icon" alt="twitter">
-                    </a>
-                    <a class="no-hover" href="https://www.instagram.com/futurice/" target="_blank">
-                        <img src="img/icons/ICO_instagram.svg" class="img-fluid icon" alt="instagram">
-                    </a>
-                    <a class="no-hover" href="https://github.com/futurice" target="_blank">
-                        <img src="img/icons/github.svg" class="img-fluid icon" alt="github">
-                    </a>
-                </div>
-            </div>
-    </section>
-
-
-    <section id="final">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12 content-center">
-                    <h3 class="section-heading">This project is brought to you by Futurice, a digital agency focused on Service Design, Business Development
-                        and Software Crafting.</h3>
-
-                    <a href="http://futurice.com/" target="_blank">
-                        <img src="img/logos/logo_futurice.svg" class="img-fluid icon" alt="futurice.com">
-                    </a>
-
-                </div>
-            </div>
+        <div class="carousel-cell container">
+          <img class="carousel-img" src="assets/output-techpreview.png" />
+          <div class="carousel-text">
+            <p>
+              You will understand what types of devices and technology your service needs to exist.
+            </p>
+          </div>
         </div>
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-lg content-center" style="background-color: #eeeeef">
-                    <a class="no-hover" href="https://spiceprogram.org/" target="_blank">
-                        <img src="img/logos/logo_chilicorn.svg" class="img-fluid icon" alt="futurice.com">
-                    </a>
-                    <br>
-                    <p class="block-text grey-color">Futurice sponsors open source and social impact through the Spice Program.</p>
-                </div>
 
-            </div>
-
-            <div class="row">
-                <div class="col-lg content-center" style="background-color: #4d4d4d">
-                    <p class="block-text white-color">If you &lsaquo;3 it, contribute to it &#38; share it!</p>
-                </div>
-
-            </div>
-
+        <div class="carousel-cell container">
+          <img class="carousel-img" src="assets/output-userjourney.png" />
+          <div class="carousel-text">
+            <p>
+              A visualization of all the steps and touchpoints that make up your service, from the user's perspective.
+            </p>
+          </div>
         </div>
-    </section>
 
+        <div class="carousel-cell container">
+          <img class="carousel-img" src="assets/output-datamapping.png" />
+          <div class="carousel-text">
+          <p>
+            What kinds of data will you need or collect in each step.
+          </p>
+          </div>
+        </div>
 
+      </div>
+    </div>
 
-    <!-- Google Analytics -->
-    <script>
-        (function (i, s, o, g, r, a, m) {
-            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
-                (i[r].q = i[r].q || []).push(arguments)
-            }, i[r].l = 1 * new Date(); a = s.createElement(o),
-                m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
-        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+  </section>
 
-        ga('create', 'UA-65773944-1', 'auto');
-        ga('send', 'pageview');
-    </script>
+  <section id="download" class="download container wide">
+    <h2 class="large-paragraph">
+      Can't wait to test the Kit in action?
+    </h2>
 
-    <!-- Bootstrap core JavaScript -->
-    <script src="lib/jquery/jquery.min.js"></script>
-    <script src="lib/tether/tether.min.js"></script>
-    <script src="lib/bootstrap/js/bootstrap.min.js"></script>
-    <script src="lib/flickity/flickity.pkgd.min.js"></script>
+    <div class="row-container">
+      <div class="row-element three-columns">
+        <img class="row-img mono-icon"src="assets/icons/download.svg">
+        <a class="button" href="https://github.com/futurice/iot-service-kit/archive/master.zip">Download the&nbspKit</a>
+      </div>
+      <div class="row-element three-columns">
+        <img class="row-img mono-icon" src="assets/icons/3d-printing.svg">
+        <p>Print it yourself at any 3D printer</p>
+      </div>
+      <div class="row-element three-columns">
+        <img class="row-img mono-icon" src="assets/icons/service.svg">
+        <p>Start creating awesome IoT services</p>
+      </div>
+    </div>
 
-    <!-- Plugin JavaScript -->
-    <script src="lib/jquery-easing/jquery.easing.min.js"></script>
-    <script src="lib/scrollreveal/scrollreveal.min.js"></script>
-    <script src="lib/magnific-popup/jquery.magnific-popup.min.js"></script>
+  </section>
 
-    <!-- Custom scripts for this template -->
-    <script src="template.min.js"></script>
-    <script src="script.js"></script>
+  <section id="awards" class="awards gray">
+    <h2 class="large-paragraph">
+      Prizes and honorable mentions
+    </h2>
 
+    <div class="container wide">
+      <div class="row-container">
+        <div class="row-element three-columns">
+          <h4>Winners - 2016 UX Magazine Award</h4>
+          <p>“Innovative Tool or Technique”</p>
+          <img class="row-img logo wide"src="assets/logos/uxmag.png">
+        </div>
+        <div class="row-element three-columns">
+          <h4>Finalists - 2016 Service Design Award</h4>
+          <p>“Methodology”</p>
+          <img class="row-img logo" src="assets/logos/sdn.svg">
+        </div>
+        <div class="row-element three-columns center-vertically">
+          <p>Recently presented&nbspat</p>
+          <img class="row-img logo wide" src="assets/logos/i17.jpg">
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <section id="opensource" class="opensource container narrow">
+    <h2 class="large-paragraph">
+      We ❤ Open Source
+    </h2>
+    <p class="large-paragraph">
+      This kit is an open source tool for you to use and develop further with the community.
+    </p>
+
+    <a class="button centered gh-button" href="https://github.com/futurice/iot-service-kit">Check it out on Github</a>
+
+    <div class="container narrow">
+      <div class="row-container">
+        <div class="row-element two-columns">
+          <a href="https://creativecommons.org/licenses/by/4.0"><img class="cc-logo"src="assets/icons/cc-by.svg"></a>
+          <p>
+            The kit is licensed under <a href="https://creativecommons.org/licenses/by/4.0">Creative Commons CC-BY.</a>
+          </p>
+        </div>
+        <div class="row-element two-columns">
+          <a href="https://spiceprogram.org"><img class="chilicorn-logo" src="assets/logos/chilicorn.svg"></a>
+          <p>
+            <a href="https://futurice.com">Futurice</a> sponsors open source through the <a href="https://spiceprogram.org">Spice&nbspProgram</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <section id="contact" class="contact gray">
+    <h2 class="large-paragraph">
+      Contact the Creators
+    </h2>
+
+    <div class="container">
+      <div class="row-container">
+        <div class="row-element two-columns">
+          <img class="row-img"src="assets/contact-ricardo.jpg">
+          <p>
+            <b>Ricardo Brito</b>
+            <br/>
+            Service designer & UX
+          </p>
+          <p>
+            <a href="mailto:ricardo.brito@futurice.com">ricardo.brito@futurice.com</a>
+          </p>
+          <p>
+            <a href="https://twitter.com/toastedric">@toastedric</a>
+          </p>
+        </div>
+        <div class="row-element two-columns">
+          <img class="row-img"src="assets/contact-paul.jpg">
+          <p>
+            <b>Paul Houghton</b>
+            <br/>
+            Director, Wizardry and Development
+          </p>
+          <p>
+            <a href="mailto:paul.houghton@futurice.com">paul.houghton@futurice.com</a>
+          </p>
+          <p>
+            <a href="https://twitter.com/mobile_rat">@mobile_rat</a>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <h2 class="social-header large-paragraph">
+      Find us on
+    </h2>
+    <div class="social-icon-container">
+      <a href="https://github.com/futurice/iot-service-kit">
+        <img class="social-icon" src="assets/icons/github.svg">
+      </a>
+      <a href="https://twitter.com/iotservicekit">
+        <img class="social-icon" src="assets/icons/twitter.svg">
+      </a>
+      <a href="https://www.instagram.com/explore/tags/iotservicekit">
+        <img class="social-icon" src="assets/icons/instagram.svg">
+      </a>
+    </div>
+
+  </section>
+
+  <section id="futurice" class="futurice container">
+    <p class="large-paragraph">
+      This project is brought to you by Futurice, a digital agency focused on Service Design, Consultancy and Software&nbspCraftsmanship.
+    </p>
+    <a href="https://futurice.com"><img class="row-img logo" src="assets/logos/futurice.svg"></a>
+  </section>
+
+  <section class="footer">
+    <small class="tiny-paragraph">
+      Made with ❤ in Berlin
+    </small>
+  </section>
+
+  <script src="lib/jquery.min.js"></script>
+  <script src="lib/flickity.pkgd.min.js"></script>
+  <script src="script.js"></script>
 </body>
 
 </html>
