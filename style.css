@@ -260,19 +260,39 @@ h3,
   width: 100%;
   overflow: hidden;
 }
-.background-vid {
+.cover-background {
   display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
   background-color: var(--gray);
 }
+.cover-background.vid,
+.cover-background.img-large {
+  display: none;
+}
+@media screen and (min-width: 500px) {
+  .cover-background.img-small {
+    display: none;
+  }
+  .cover-background.img-large {
+    display: block;
+  }
+}
+@media screen and (min-width: 1100px) {
+  .cover-background.img-large {
+    display: none;
+  }
+  .cover-background.vid {
+    display: block;
+  }
+}
 
 .cover-content {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -60%);
+  transform: translate(-50%, -50%);
   text-align: center;
 }
 .main-title {
@@ -280,6 +300,7 @@ h3,
 }
 .scrolldown-arrow {
   display: block;
+  width: 2em;
   position: absolute;
   bottom: 2em;
   left: 50%;
